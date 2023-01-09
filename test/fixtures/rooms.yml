@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room_name: MyString
+  description: MyString
+  benefits: MyString
+  price_per_day: 9.99
+
+two:
+  room_name: MyString
+  description: MyString
+  benefits: MyString
+  price_per_day: 9.99
