@@ -1,5 +1,5 @@
 class Api::V1::RoomTypesController < ApplicationController
-  before_action :set_api_v1_room_type, only: %i[ show update destroy ]
+  before_action :set_api_v1_room_type, only: %i[show update destroy]
 
   # GET /api/v1/room_types
   def index
@@ -39,13 +39,14 @@ class Api::V1::RoomTypesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_api_v1_room_type
-      @api_v1_room_type = Api::V1::RoomType.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def api_v1_room_type_params
-      params.require(:api_v1_room_type).permit(:type, :description, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_api_v1_room_type
+    @api_v1_room_type = Api::V1::RoomType.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def api_v1_room_type_params
+    params.require(:api_v1_room_type).permit(:type, :description, :price)
+  end
 end
