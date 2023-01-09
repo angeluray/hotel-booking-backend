@@ -1,5 +1,6 @@
 class Api::V1::ReservationsController < ApplicationController
-  before_action :set_api_v1_reservation, only: %i[show update destroy]
+  before_action :set_api_v1_reservation,
+                only: %i[show update destroy]
 
   # GET /api/v1/reservations
   def index
@@ -18,9 +19,11 @@ class Api::V1::ReservationsController < ApplicationController
     @api_v1_reservation = Api::V1::Reservation.new(api_v1_reservation_params)
 
     if @api_v1_reservation.save
-      render json: @api_v1_reservation, status: :created, location: @api_v1_reservation
+      render json: @api_v1_reservation,
+             status: :created, location: @api_v1_reservation
     else
-      render json: @api_v1_reservation.errors, status: :unprocessable_entity
+      render json: @api_v1_reservation.errors,
+             status: :unprocessable_entity
     end
   end
 
@@ -29,7 +32,8 @@ class Api::V1::ReservationsController < ApplicationController
     if @api_v1_reservation.update(api_v1_reservation_params)
       render json: @api_v1_reservation
     else
-      render json: @api_v1_reservation.errors, status: :unprocessable_entity
+      render json: @api_v1_reservation.errors,
+             status: :unprocessable_entity
     end
   end
 

@@ -31,8 +31,10 @@ class Api::V1::HotelsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should destroy api_v1_hotel' do
-    assert_difference('Api::V1::Hotel.count', -1) do
-      delete api_v1_hotel_url(@api_v1_hotel), as: :json
+    assert_difference('Api::V1::Hotel.count',
+                      -1) do
+      delete api_v1_hotel_url(@api_v1_hotel),
+             as: :json
     end
 
     assert_response :no_content

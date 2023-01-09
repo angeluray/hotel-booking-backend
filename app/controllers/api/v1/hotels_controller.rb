@@ -1,5 +1,6 @@
 class Api::V1::HotelsController < ApplicationController
-  before_action :set_api_v1_hotel, only: %i[show update destroy]
+  before_action :set_api_v1_hotel,
+                only: %i[show update destroy]
 
   # GET /api/v1/hotels
   def index
@@ -18,9 +19,11 @@ class Api::V1::HotelsController < ApplicationController
     @api_v1_hotel = Api::V1::Hotel.new(api_v1_hotel_params)
 
     if @api_v1_hotel.save
-      render json: @api_v1_hotel, status: :created, location: @api_v1_hotel
+      render json: @api_v1_hotel,
+             status: :created, location: @api_v1_hotel
     else
-      render json: @api_v1_hotel.errors, status: :unprocessable_entity
+      render json: @api_v1_hotel.errors,
+             status: :unprocessable_entity
     end
   end
 
@@ -29,7 +32,8 @@ class Api::V1::HotelsController < ApplicationController
     if @api_v1_hotel.update(api_v1_hotel_params)
       render json: @api_v1_hotel
     else
-      render json: @api_v1_hotel.errors, status: :unprocessable_entity
+      render json: @api_v1_hotel.errors,
+             status: :unprocessable_entity
     end
   end
 
@@ -47,6 +51,7 @@ class Api::V1::HotelsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def api_v1_hotel_params
-    params.require(:api_v1_hotel).permit(:name, :description, :rating, :image)
+    params.require(:api_v1_hotel).permit(:name,
+                                         :description, :rating, :image)
   end
 end

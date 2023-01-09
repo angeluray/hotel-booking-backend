@@ -1,5 +1,6 @@
 class Api::V1::CitiesController < ApplicationController
-  before_action :set_api_v1_city, only: %i[show update destroy]
+  before_action :set_api_v1_city,
+                only: %i[show update destroy]
 
   # GET /api/v1/cities
   def index
@@ -18,9 +19,11 @@ class Api::V1::CitiesController < ApplicationController
     @api_v1_city = Api::V1::City.new(api_v1_city_params)
 
     if @api_v1_city.save
-      render json: @api_v1_city, status: :created, location: @api_v1_city
+      render json: @api_v1_city,
+             status: :created, location: @api_v1_city
     else
-      render json: @api_v1_city.errors, status: :unprocessable_entity
+      render json: @api_v1_city.errors,
+             status: :unprocessable_entity
     end
   end
 
@@ -29,7 +32,8 @@ class Api::V1::CitiesController < ApplicationController
     if @api_v1_city.update(api_v1_city_params)
       render json: @api_v1_city
     else
-      render json: @api_v1_city.errors, status: :unprocessable_entity
+      render json: @api_v1_city.errors,
+             status: :unprocessable_entity
     end
   end
 

@@ -20,7 +20,8 @@ class Api::V1::RoomTypesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should show api_v1_room_type' do
-    get api_v1_room_type_url(@api_v1_room_type), as: :json
+    get api_v1_room_type_url(@api_v1_room_type),
+        as: :json
     assert_response :success
   end
 
@@ -31,8 +32,10 @@ class Api::V1::RoomTypesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should destroy api_v1_room_type' do
-    assert_difference('Api::V1::RoomType.count', -1) do
-      delete api_v1_room_type_url(@api_v1_room_type), as: :json
+    assert_difference('Api::V1::RoomType.count',
+                      -1) do
+      delete api_v1_room_type_url(@api_v1_room_type),
+             as: :json
     end
 
     assert_response :no_content
