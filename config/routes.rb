@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :users
+  post 'login', to: 'authentication#login'
+  
   namespace :api do
     namespace :v1 do
       resources :room_types
@@ -7,7 +10,6 @@ Rails.application.routes.draw do
       resources :cities
     end
   end
-  resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
