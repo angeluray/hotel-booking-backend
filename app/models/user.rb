@@ -3,5 +3,6 @@ class User < ApplicationRecord
   has_many :reservations
   has_many :hotels, through: :reservations
 
-  validates :email, presence: true, uniqueness: true
+  validates :username, presence: true, uniqueness: true
+  validates :password, presence: true
 end
