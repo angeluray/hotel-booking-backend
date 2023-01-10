@@ -18,7 +18,7 @@ class ApplicationController < ActionController::API
   end
 
   def token
-    auth_header.split(' ')[1]
+    auth_header.split[1]
   end
 
   def secret
