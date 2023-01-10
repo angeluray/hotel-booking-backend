@@ -43,16 +43,17 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find_by_username!(params[:_username])
-    rescue ActiveRecord::RecordNotFound
-      render json: { errors: 'User not found' }, status: :not_found
+  rescue ActiveRecord::RecordNotFound
+    render json: { errors: 'User not found' }, status: :not_found
   end
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def user_params
-      params.permit(:name, :username, :role, :email, :password, :password_confirmation)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def user_params
+    params.permit(:name, :username, :role, :email, :password, :password_confirmation)
+  end
 end
