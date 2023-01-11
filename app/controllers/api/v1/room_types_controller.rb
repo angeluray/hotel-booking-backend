@@ -5,8 +5,6 @@ class Api::V1::RoomTypesController < ApplicationController
   # GET /api/v1/room_types
   def index
     @room_types = RoomType.all
-
-
     render json: @room_types
   end
 

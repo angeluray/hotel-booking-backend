@@ -18,8 +18,6 @@ class Api::V1::HotelsController < ApplicationController
   # POST /api/v1/hotels
   def create
     @hotel = Hotel.new(hotel_params)
-
-
     if @hotel.save
       render json: @hotel, status: :created, location: @hotel
     else
