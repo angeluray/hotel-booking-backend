@@ -28,6 +28,8 @@ Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 30
 
+Style/RedundantArgument:
+  Enabled: false
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:
@@ -53,6 +55,8 @@ Layout/MultilineMethodCallIndentation:
 Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
+  Enabled: false
+Lint/DuplicateBranch:
   Enabled: false
 Style/HashEachMethods:
   Enabled: false
