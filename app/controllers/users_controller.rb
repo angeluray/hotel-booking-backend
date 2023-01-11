@@ -6,12 +6,13 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users
+    render json: @users, status: :ok
   end
 
   # GET /users/1
   def show
-    render json: @user
+    @user = User.find(params[:id])
+    render json: @user, status: :ok
   end
 
   # POST /users
@@ -36,6 +37,7 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   def destroy
+    @user = User.find(params[:id])
     @user.destroy
   end
 
