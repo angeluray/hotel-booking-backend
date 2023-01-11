@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      resources :users do
+        resources :reservations
+      end
+
+      resources :cities do
+        resources :hotels
+      end
       resources :room_types
-      resources :reservations
+
       resources :hotels
       resources :cities
     end
