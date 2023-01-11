@@ -1,8 +1,8 @@
 class Api::V1::ReservationsController < ApplicationController
-  before_action :set_api_v1_reservation, only: :destroy
+  before_action :set_api_v1_reservation, only: %i[show destroy]
 
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.all.includes([:user])
     render json: @reservations, status: 200
   end
 
@@ -14,6 +14,10 @@ class Api::V1::ReservationsController < ApplicationController
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @reservation = Reservation.find(params[:id])
   end
 
   def destroy
@@ -33,6 +37,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.require(:reservation).permit(:date)
+    params.require(:reservation).permit(:date, :user_id, :room_type_id, :hotel_id)
   end
 end
