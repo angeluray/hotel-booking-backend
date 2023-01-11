@@ -10,7 +10,7 @@ class Api::V1::CitiesController < ApplicationController
 
   # GET /api/v1/cities/1
   def show
-    @city = City.find(params[:id]) 
+    @city = City.find(params[:id])
     render json: @city
   end
 
@@ -18,12 +18,12 @@ class Api::V1::CitiesController < ApplicationController
   def create
     @city = City.new(city_params)
 
-      if @city.save
-        render json: @city, status: :created, location: @city
-      else
-        render json: @city.errors, status: :unprocessable_entity
-      end
+    if @city.save
+      render json: @city, status: :created, location: @city
+    else
+      render json: @city.errors, status: :unprocessable_entity
     end
+  end
 
   # PATCH/PUT /api/v1/cities/1
   def update
@@ -36,9 +36,9 @@ class Api::V1::CitiesController < ApplicationController
 
   # DELETE /api/v1/cities/1
   def destroy
-    @city = City.find(params[:id]) 
-      @city.destroy
-      render json: { city: @city, message: 'City has successfully been deleted' }
+    @city = City.find(params[:id])
+    @city.destroy
+    render json: { city: @city, message: 'City has successfully been deleted' }
   end
 
   private
