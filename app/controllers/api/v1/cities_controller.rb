@@ -38,14 +38,14 @@ class Api::V1::CitiesController < ApplicationController
   def destroy
     @city = City.find(params[:id]) 
       @city.destroy
-      render json: { user: @city, message: 'City has successfully been deleted' }
+      render json: { city: @city, message: 'City has successfully been deleted' }
   end
 
   private
 
   # Use callbacks to share common setup or constraints between actions.
-  def set_api_v1_city
-    @api_v1_city = Api::V1::City.find(params[:id])
+  def set_city
+    @city = City.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
