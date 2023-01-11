@@ -8,4 +8,6 @@ class Hotel < ApplicationRecord
   validates :rating, presence: true
   validates :image, presence: true
   validates :city_id, presence: true
+
+  has_one_attached :image
 end
