@@ -4,42 +4,41 @@ class Api::V1::CitiesController < ApplicationController
 
   # GET /api/v1/cities
   def index
-    @api_v1_cities = Api::V1::City.all
-
-    render json: @api_v1_cities
+    @cities = City.all
+    render json: @cities
   end
 
   # GET /api/v1/cities/1
   def show
-    render json: @api_v1_city
+    @city = City.find(params[:id]) 
+    render json: @city
   end
 
   # POST /api/v1/cities
   def create
-    @api_v1_city = Api::V1::City.new(api_v1_city_params)
+    @city = City.new(city_params)
 
-    if @api_v1_city.save
-      render json: @api_v1_city,
-             status: :created, location: @api_v1_city
-    else
-      render json: @api_v1_city.errors,
-             status: :unprocessable_entity
+      if @city.save
+        render json: @city, status: :created, location: @city
+      else
+        render json: @city.errors, status: :unprocessable_entity
+      end
     end
-  end
 
   # PATCH/PUT /api/v1/cities/1
   def update
-    if @api_v1_city.update(api_v1_city_params)
-      render json: @api_v1_city
+    if @city.update(city_params)
+      render json: @city
     else
-      render json: @api_v1_city.errors,
-             status: :unprocessable_entity
+      render json: @city.errors, status: :unprocessable_entity
     end
   end
 
   # DELETE /api/v1/cities/1
   def destroy
-    @api_v1_city.destroy
+    @city = City.find(params[:id]) 
+      @city.destroy
+      render json: { user: @city, message: 'City has successfully been deleted' }
   end
 
   private
@@ -50,7 +49,7 @@ class Api::V1::CitiesController < ApplicationController
   end
 
   # Only allow a list of trusted parameters through.
-  def api_v1_city_params
-    params.require(:api_v1_city).permit(:name)
+  def city_params
+    params.permit(:name)
   end
 end
