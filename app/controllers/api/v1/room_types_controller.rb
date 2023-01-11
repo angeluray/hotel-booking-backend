@@ -11,7 +11,8 @@ class Api::V1::RoomTypesController < ApplicationController
 
   # GET /api/v1/room_types/1
   def show
-    render json: @api_v1_room_type
+    @room_type = RoomType.find(params[:id])
+    render json: @room_type
   end
 
   # POST /api/v1/room_types
