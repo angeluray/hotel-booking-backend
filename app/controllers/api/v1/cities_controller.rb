@@ -5,6 +5,7 @@ class Api::V1::CitiesController < ApplicationController
   # GET /api/v1/cities
   def index
     @cities = City.all
+
     render json: @cities
   end
 
