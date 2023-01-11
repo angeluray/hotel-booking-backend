@@ -72,7 +72,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_11_124653) do
   end
 
   create_table "room_types", force: :cascade do |t|
-    t.string "type"
+    t.string "name"
     t.text "description"
     t.float "price"
     t.datetime "created_at", null: false
