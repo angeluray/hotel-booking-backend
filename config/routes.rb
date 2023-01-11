@@ -8,10 +8,10 @@ Rails.application.routes.draw do
       resources :cities do
         resources :hotels
       end
-      resources :room_types
+      resources :room_types, only: [:index]
 
       resources :hotels
-      resources :cities
+      resources :cities, only: [:index]
     end
   end
   resources :users, param: :_username
