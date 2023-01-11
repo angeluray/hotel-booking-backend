@@ -4,9 +4,8 @@ class Api::V1::HotelsController < ApplicationController
 
   # GET /api/v1/hotels
   def index
-
     @hotels = Hotel.all
-    
+
     render json: @hotels
   end
 
@@ -55,7 +54,6 @@ class Api::V1::HotelsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def hotel_params
-  
     params.permit(:name,
                   :description, :rating, :image)
   end
