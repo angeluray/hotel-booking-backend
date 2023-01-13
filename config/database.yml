@@ -24,8 +24,8 @@ default: &default
 development:
   <<: *default
   database: hotel_booking_backend_development
-  username: <%= ENV["USER_NAME"] %>
-  password: <%= ENV["PASSWORD"] %>
+  # username: <%= ENV["USER_NAME"] %>
+  # password: <%= ENV["PASSWORD"] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -86,6 +86,6 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  # database: hotel_booking_backend_production
-  # username: hotel_booking_backend
-  # password: <%= ENV["HOTEL_BOOKING_BACKEND_DATABASE_PASSWORD"] %>
+  database: hotel_booking_backend_production
+  username: hotel_booking_backend
+  password: <%= ENV["HOTEL_BOOKING_BACKEND_DATABASE_PASSWORD"] %>
