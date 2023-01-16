@@ -18,8 +18,12 @@ class Api::V1::HotelsController < ApplicationController
   # POST /api/v1/hotels
   def create
     @hotel = Hotel.new(hotel_params)
+    @city = City.find(params['city_id'])
+
+    @hotel.city = @city
+
     if @hotel.save
-      render json: @hotel, status: :created, location: @hotel
+      render json: @hotel, status: :created
     else
       render json: @hotel.errors, status: :unprocessable_entity
     end
@@ -53,6 +57,10 @@ class Api::V1::HotelsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def hotel_params
     params.permit(:name,
-                  :description, :rating, :image)
+                  :description, :rating, :image, :city_id)
+  end
+
+  def city_params
+    params.permit(:name)
   end
 end
