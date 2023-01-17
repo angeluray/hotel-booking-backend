@@ -35,7 +35,6 @@ class Api::V1::HotelsController < ApplicationController
     # @hotel.images.attach(params[:images])
     # @images = params[:images]
 
-
     @hotel.city = @city
 
     if @hotel.save
