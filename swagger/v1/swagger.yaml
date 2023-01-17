@@ -172,7 +172,7 @@ paths:
           description: authentication failed
         '200':
           description: successful
-  "/signup":
+  "/register":
     post:
       summary: Sign up
       tags:
