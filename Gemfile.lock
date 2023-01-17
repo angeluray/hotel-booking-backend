@@ -96,6 +96,8 @@ GEM
       reline (>= 0.3.0)
     json (2.6.3)
     jsonapi-renderer (0.2.2)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     jwt (2.6.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
@@ -204,6 +206,7 @@ DEPENDENCIES
   bootsnap
   debug
   figaro
+  jsonapi-serializer (~> 2.2)
   jwt
   pg (~> 1.1)
   puma (~> 5.0)

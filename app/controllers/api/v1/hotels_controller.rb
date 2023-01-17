@@ -6,7 +6,8 @@ class Api::V1::HotelsController < ApplicationController
   def index
     @hotels = Hotel.all
 
-    render json: @hotels
+    # Si da problemas cambiarlo a HotelsRepresenter en plural
+    render json: HotelRepresenter.new(@hotels).as_json
   end
 
   # GET /api/v1/hotels/1
@@ -18,10 +19,8 @@ class Api::V1::HotelsController < ApplicationController
   # POST /api/v1/hotels
   def create
     @hotel = Hotel.new(hotel_params)
-    @city = City.find(params['city_id'])
-
-    @hotel.city = @city
-
+    # @hotel.images.attach(params[@hotel][:image])
+    
     if @hotel.save
       render json: @hotel, status: :created
     else
@@ -56,8 +55,7 @@ class Api::V1::HotelsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def hotel_params
-    params.permit(:name,
-                  :description, :rating, :image, :city_id)
+    params.permit(:name, :description, :rating, :image, :city_id)
   end
 
   def city_params

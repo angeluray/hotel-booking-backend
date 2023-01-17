@@ -1,5 +1,9 @@
 require "active_support/core_ext/integer/time"
 
+Rails.application.routes.default_url_options = {
+  host: 'http://127.0.0.1:4000'
+}
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 

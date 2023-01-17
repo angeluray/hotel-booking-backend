@@ -11,23 +11,23 @@ User.create!([
       name: 'Kumie',
       username: 'Kumie',
       email: 'kumie@gmail.com',
-      password_digest: 'kumie',
+      password: 'kumie',
       role: 'Admin'
     },{
       name: 'Hana',
       username: 'Hana',
       email: 'Hana@gmail.com',
-      password_digest: 'Hana'
+      password: 'Hana'
     },{
       name: 'Tadesse',
       username: 'Tadesse',
       email: 'Tadesse@gmail.com',
-      password_digest: 'Tadesse'
+      password: 'Tadesse'
     },{
       name: 'Angel',
       username: 'Angel',
       email: 'Angel@gmail.com',
-      password_digest: 'Angel'
+      password: 'Angel'
     }
   ])
   
