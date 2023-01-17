@@ -4,12 +4,6 @@ class Hotel < ApplicationRecord
   has_many :users, through: :reservations
   has_many :room_types, through: :reservations
 
-  has_one_attached :images, dependent: :destroy
-  # has_one_attached :images do |attachable|
-  #   attachable.variant :thumb, resize_to_limit: [100, 100]
-  # end  
+  # has_one_attached :images, dependent: :destroy
 
-  def avatar_url
-    Rails.application.routes.url_helpers.url_for(images)
-  end
 end
