@@ -1,0 +1,245 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+components:
+  securitySchemes:
+    bearer_auth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+paths:
+  "/api/v1/hotels":
+    get:
+      summary: list hotels
+      tags:
+      - Hotels
+      security:
+      - bearer_auth: []
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '401':
+          description: Invalid request
+    post:
+      summary: Create hotel
+      tags:
+      - Hotels
+      security:
+      - bearer_auth: []
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '401':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                rating:
+                  type: string
+                image_:
+                  type: string
+                city_id:
+                  type: integer
+              required:
+              - name
+              - description
+              - rating
+              - image
+              - city
+  "/api/v1/hotels/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show hotel
+      tags:
+      - Hotels
+      security:
+      - bearer_auth: []
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '401':
+          description: authentication failed
+        '200':
+          description: successful
+    delete:
+      summary: Delete Hotel
+      tags:
+      - Hotels
+      security:
+      - bearer_auth: []
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '401':
+          description: authentication failed
+        '200':
+          description: successful
+  "/api/v1/reservations":
+    post:
+      summary: Create Reservations
+      tags:
+      - Reservations
+      security:
+      - bearer_auth: []
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '401':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                day:
+                  type: string
+                  format: date
+                  required: true
+                hotel_id:
+                  type: integer
+                room_type_id:
+                  type: integer
+              required:
+              - date
+              - hotel_id
+              - room_type_id
+    get:
+      summary: List of reservations
+      tags:
+      - Reservations
+      security:
+      - bearer_auth: []
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '401':
+          description: authentication failed
+  "/api/v1/reservations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    delete:
+      summary: Delete Reservation
+      tags:
+      - Reservations
+      security:
+      - bearer_auth: []
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '401':
+          description: authentication failed
+        '200':
+          description: successful
+  "/signup":
+    post:
+      summary: Sign up
+      tags:
+      - register user
+      parameters: []
+      responses:
+        '200':
+          description: sign up
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+              - name
+              - email
+              - password
+  "/login":
+    post:
+      summary: Log in
+      tags:
+      - user session
+      parameters: []
+      responses:
+        '200':
+          description: log in
+        '401':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+              - email
+              - password
+  "/logout":
+    delete:
+      summary: " delete session"
+      tags:
+      - Logout
+      security:
+      - bearer_auth: []
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '401':
+          description: authentication failed
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3001
