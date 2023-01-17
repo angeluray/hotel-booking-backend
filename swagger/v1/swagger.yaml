@@ -203,7 +203,7 @@ paths:
     post:
       summary: Log in
       tags:
-      - user session
+      - user login
       parameters: []
       responses:
         '200':
@@ -225,7 +225,7 @@ paths:
               - password
   "/logout":
     delete:
-      summary: " delete session"
+      summary: " logout user"
       tags:
       - Logout
       security:
