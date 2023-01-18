@@ -1,6 +1,5 @@
 class Api::V1::CitiesController < ApplicationController
-  before_action :set_api_v1_city,
-                only: %i[show update destroy]
+  before_action :set_city, only: %i[show update destroy]
 
   # GET /api/v1/cities
   def index
