@@ -6,30 +6,30 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-# User.create!([
-#     {
-#       name: 'Kumie',
-#       username: 'Kumie',
-#       email: 'kumie@gmail.com',
-#       password: 'kumie',
-#       role: 'Admin'
-#     },{
-#       name: 'Hana',
-#       username: 'Hana',
-#       email: 'Hana@gmail.com',
-#       password: 'Hana'
-#     },{
-#       name: 'Tadesse',
-#       username: 'Tadesse',
-#       email: 'Tadesse@gmail.com',
-#       password: 'Tadesse'
-#     },{
-#       name: 'Angel',
-#       username: 'Angel',
-#       email: 'Angel@gmail.com',
-#       password: 'Angel'
-#     }
-#   ])
+User.create!([
+    {
+      name: 'Kumie',
+      username: 'Kumie',
+      email: 'kumie@gmail.com',
+      password: 'kumie',
+      role: 'Admin'
+    },{
+      name: 'Hana',
+      username: 'Hana',
+      email: 'Hana@gmail.com',
+      password: 'Hana',
+    },{
+      name: 'Tadesse',
+      username: 'Tadesse',
+      email: 'Tadesse@gmail.com',
+      password: 'Tadesse'
+    },{
+      name: 'Angel',
+      username: 'Angel',
+      email: 'Angel@gmail.com',
+      password: 'Angel'
+    }
+  ])
   
   
   City.create!([
