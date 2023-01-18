@@ -8,7 +8,8 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
-    @reservation.user = @current_user
+    @user = User.find(params['user_id'])
+    @reservation.user = @user
 
     if @reservation.save
       render json: @reservation, status: :created
@@ -38,6 +39,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.require(:reservation).permit(:date, :user_id, :room_type_id, :hotel_id)
+    params.permit(:date, :user_id, :room_type_id, :hotel_id)
   end
 end

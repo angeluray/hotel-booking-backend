@@ -1,18 +1,17 @@
 class Api::V1::CitiesController < ApplicationController
-  before_action :set_api_v1_city,
-                only: %i[show update destroy]
+  before_action :set_city, only: %i[show update destroy]
 
   # GET /api/v1/cities
   def index
     @cities = City.all
-
     render json: @cities
   end
 
   # GET /api/v1/cities/1
   def show
     @city = City.find(params[:id])
-    render json: @city
+    @city_hotels = @city.hotels.all
+    render json: @city_hotels
   end
 
   # POST /api/v1/cities

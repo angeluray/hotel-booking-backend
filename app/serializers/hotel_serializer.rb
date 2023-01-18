@@ -9,3 +9,4 @@ class HotelSerializer < ActiveModel::Serializer
       url: rails_blob_url(object.images, only_path: true)
     }
   end
+end
