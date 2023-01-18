@@ -1,6 +1,5 @@
 class Api::V1::HotelsController < ApplicationController
-  before_action :set_api_v1_hotel,
-                only: %i[show update destroy]
+  before_action :set_hotel, only: %i[show update destroy]
 
   # GET /api/v1/hotels
   def index
@@ -20,11 +19,11 @@ class Api::V1::HotelsController < ApplicationController
 
   # GET /api/v1/hotels/1
   def show
-    @result = []
+    @one = []
     @hotel = Hotel.find(params[:id])
-    @result.push(@hotel.as_json.merge({ image: url_for(@hotel.image) }))
+    @one.push(@hotel.as_json.merge({ image: url_for(@hotel.image) }))
 
-    render json: @result
+    render json: @one
   end
 
   # POST /api/v1/hotels
