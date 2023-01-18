@@ -6,30 +6,30 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-User.create!([
-    {
-      name: 'Kumie',
-      username: 'Kumie',
-      email: 'kumie@gmail.com',
-      password_digest: 'kumie',
-      role: 'Admin'
-    },{
-      name: 'Hana',
-      username: 'Hana',
-      email: 'Hana@gmail.com',
-      password_digest: 'Hana'
-    },{
-      name: 'Tadesse',
-      username: 'Tadesse',
-      email: 'Tadesse@gmail.com',
-      password_digest: 'Tadesse'
-    },{
-      name: 'Angel',
-      username: 'Angel',
-      email: 'Angel@gmail.com',
-      password_digest: 'Angel'
-    }
-  ])
+# User.create!([
+#     {
+#       name: 'Kumie',
+#       username: 'Kumie',
+#       email: 'kumie@gmail.com',
+#       password: 'kumie',
+#       role: 'Admin'
+#     },{
+#       name: 'Hana',
+#       username: 'Hana',
+#       email: 'Hana@gmail.com',
+#       password: 'Hana'
+#     },{
+#       name: 'Tadesse',
+#       username: 'Tadesse',
+#       email: 'Tadesse@gmail.com',
+#       password: 'Tadesse'
+#     },{
+#       name: 'Angel',
+#       username: 'Angel',
+#       email: 'Angel@gmail.com',
+#       password: 'Angel'
+#     }
+#   ])
   
   
   City.create!([
@@ -68,3 +68,36 @@ User.create!([
     { name:'Double-double', description: 'A Room with two double ( or perhaps queen) beds. And can accommodate two to four persons with two twin, double or queen-size beds.', price: 500},
     { name:'Studio', description: 'A room with a studio bed- a couch which can be converted into a bed. May also have an additional bed.', price: 400},
   ])
+
+  Hotel.create!([
+    {
+      name: 'Addis International Hotel',
+      description: 'Addis International hotel is a 4-star hotel located in the heart of Addis Ababa. It is a 5-minute walk from the National Museum of Ethiopia and 10 minutes from the National Theatre. The hotel offers free Wi-Fi and free parking. The rooms at Addis International hotel are air-conditioned and have a flat-screen TV with satellite channels. Each room has a private bathroom with a shower and free toiletries. The hotel has a 24-hour front desk and a restaurant. The hotel is 1.5 km from the National Palace Museum and 2 km from the National Museum of Ethiopia. Bole International Airport is 6 km away.',
+     rating: 4,
+     image: 'https://cf.bstatic.com/images/hotel/max1024x768/247/247109430.jpg',
+      city_id: 1
+    },
+    {
+      name: 'Addis Grand Hotel',
+      description: 'Addis Grand Hotel is a 4-star hotel located in the heart of Addis Ababa. It is a 5-minute walk from the National Museum of Ethiopia and 10 minutes from the National Theatre. The hotel offers free Wi-Fi and free parking. The rooms at Addis Grand Hotel are air-conditioned and have a flat-screen TV with satellite channels. Each room has a private bathroom with a shower and free toiletries. The hotel has a 24-hour front desk and a restaurant. The hotel is 1.5 km from the National Palace Museum and 2 km from the National Museum of Ethiopia. Bole International Airport is 6 km away.',
+      rating: 4,
+      image: 'https://cf.bstatic.com/images/hotel/max1024x768/247/247109430.jpg',
+      city_id: 2 
+    },
+    {
+      name: 'Blue Nile Hotel',
+      description: 'Blue Nile Hotel is a 4-star hotel located in the heart of Addis Ababa. It is a 5-minute walk from the National Museum of Ethiopia and 10 minutes from the National Theatre. The hotel offers free Wi-Fi and free parking. The rooms at Blue Nile Hotel are air-conditioned and have a flat-screen TV with satellite channels. Each room has a private bathroom with a shower and free toiletries. The hotel has a 24-hour front desk and a restaurant. The hotel is 1.5 km from the National Palace Museum and 2 km from the National Museum of Ethiopia. Bole International Airport is 6 km away.',
+      rating: 4,
+      image: 'https://cf.bstatic.com/images/hotel/max1024x768/248/247109430.jpg',
+      city_id: 3
+    },
+    {
+      name: 'Goha Hotel',
+      description: 'Goha Hotel is a 4-star hotel located in the heart of Addis Ababa. It is a 5-minute walk from the National Museum of Ethiopia and 10 minutes from the National Theatre. The hotel offers free Wi-Fi and free parking. The rooms at Goha Hotel are air-conditioned and have a flat-screen TV with satellite channels. Each room has a private bathroom with a shower and free toiletries. The hotel has a 24-hour front desk and a restaurant. The hotel is 1.5 km from the National Palace Museum and 2 km from the National Museum of Ethiopia. Bole International Airport is 6 km away.',
+      rating: 4,
+      image: 'https://cf.bstatic.com/images/hotel/max1024x768/249/247109430.jpg',
+      city_id: 4
+    },
+
+  ])
+
