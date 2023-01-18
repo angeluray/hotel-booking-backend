@@ -12,7 +12,8 @@ class Api::V1::CitiesController < ApplicationController
   # GET /api/v1/cities/1
   def show
     @city = City.find(params[:id])
-    render json: @city
+    @city_hotels = @city.hotels.all
+    render json: @city_hotels
   end
 
   # POST /api/v1/cities
