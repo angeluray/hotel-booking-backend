@@ -2,9 +2,9 @@ class Api::V1::HotelsController < ApplicationController
 
   # GET /api/v1/hotels
   def index
-    # @hotels = Hotel.all.with_attached_images
+
     @hotels = []
-    # render json: @hotels
+
     Hotel.all.each do |hotel|
       @hotels.push(hotel.as_json.merge({ image: url_for(hotel.image) }))
     end
@@ -32,10 +32,6 @@ class Api::V1::HotelsController < ApplicationController
   def create
     @hotel = Hotel.new(hotel_params)
     @city = City.find(params['city_id'])
-    # @hotel.images.attached(params[@hotel][:images])
-    # @hotel.images.attach(params[:images])
-    # @images = params[:images]
-
 
     @hotel.city = @city
 
