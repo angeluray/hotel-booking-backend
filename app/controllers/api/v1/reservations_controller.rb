@@ -8,8 +8,8 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
-    @user = User.find(params['user_id'])
-    @reservation.user_id = @user
+    # @user = User.find(params['user_id'])
+    # @reservation.user_id = @user
 
     if @reservation.save
       render json: @reservation, status: :created
