@@ -17,6 +17,4 @@ Rails.application.routes.draw do
   resources :users, param: :_username
   post '/auth/login', to: 'authentication#login'
   get '/*a', to: 'application#not_found'
-  get '/api/hotelbycity/:id', to: 'api/hotels#hotel_by_city'
-  get '/api/v1/users/:id/reservations', to: 'api/v1/reservations#index'
 end
