@@ -1,5 +1,5 @@
 class Api::V1::RoomTypesController < ApplicationController
-  before_action :set_api_v1_room_type,
+  before_action :set_room_type,
                 only: %i[show update destroy]
 
   # GET /api/v1/room_types
@@ -51,7 +51,7 @@ class Api::V1::RoomTypesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def room_type_params
-    params.require(:room_type).permit(
+    params.permit(
       :type, :description, :price
     )
   end
