@@ -46,22 +46,27 @@ class Api::V1::HotelsController < ApplicationController
       render json: @hotel.errors, status: :unprocessable_entity
     end
   end
+
   # DELETE /api/v1/hotels/1
   def destroy
     @hotel = Hotel.find(params[:id])
     @hotel.destroy
     render json: { message: 'Hotel has successfully been deleted' }
   end
+
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_hotel
     @hotel = Hotel.find(params[:id])
   end
+
   # Only allow a list of trusted parameters through.
   def hotel_params
     params.permit(:name,
                   :description, :rating, :image, :city_id)
   end
+
   def city_params
     params.permit(:name)
   end
