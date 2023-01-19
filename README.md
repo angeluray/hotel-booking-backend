@@ -76,12 +76,13 @@ Hotel Booking Backend is a Hotel Booking application where the user can register
 
 The end result should follow the following data model (this is an Entity Relationship Diagram that you are already familiar with):
 
-> ![](https://drawsql.app/teams/microverse-97/diagrams/erd)
+  image.png
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 [Live Demo](https://hotelator.onrender.com)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 #### Link to API Documentation [API Documentation](https:/https://documenter.getpostman.com/view/25389109/2s8ZDVZifK)
