@@ -80,9 +80,11 @@ The end result should follow the following data model (this is an Entity Relatio
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+
 [Live Demo](https://hotelator.onrender.com)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-#### Link to API Documentation [API Documentation](https://)
+
+#### Link to API Documentation [API Documentation](https:/https://documenter.getpostman.com/view/25389109/2s8ZDVZifK)
 
 ## Roadmap
 
