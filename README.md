@@ -87,7 +87,7 @@ The end result should follow the following data model (this is an Entity Relatio
 
 ### <a src="https://hotelator.onrender.com">Frontend Deployment</a>
 
-### <a src="https://hotelator.onrender.com"> Backend API deployment</a>
+- [Bakend deployment link](https://hotelator.onrender.com)
 > Note this is for information purpose, however if you go to this link you wont be able to see a content, since it is API only(It will retrieve json responses)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
