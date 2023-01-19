@@ -76,7 +76,8 @@ Hotel Booking Backend is a Hotel Booking application where the user can register
 
 The end result should follow the following data model (this is an Entity Relationship Diagram that you are already familiar with):
 
-  image.png
+![image](https://user-images.githubusercontent.com/85793292/213567829-7e4e52a4-8d2a-4688-94b4-3be67b5b3ca2.png)
+  
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
