@@ -28,7 +28,7 @@
 # 📖 Hotel Booking App 
 Hotel Booking Backend is a Hotel Booking application where the user can register new accounts, login and reserve a set of different Hotels. It is built and connected by using two different repos, including Back-end(Rails) and Front-end(React/Redux).
 
-#### Link to React App [Hello-react-frontend](https://github.com/angeluray/hotel-booking-frontend.git)
+#### Link to React App [Hotel-Booking-Frontend](https://github.com/angeluray/hotel-booking-frontend.git)
 
 ## 🛠 Built With <a name="built-with"></a>
 
