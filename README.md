@@ -92,7 +92,7 @@ The end result should follow the following data model (this is an Entity Relatio
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### <a src="https://documenter.getpostman.com/view/25389109/2s8ZDVZifK"> Link to the Hotelator Api Documentation</a>
+- [Link to the Hotelator API](https://documenter.getpostman.com/view/25389109/2s8ZDVZifK)
 
 ## Roadmap
 
