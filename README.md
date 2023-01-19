@@ -76,7 +76,7 @@ Hotel Booking Backend is a Hotel Booking application where the user can register
 
 The end result should follow the following data model (this is an Entity Relationship Diagram that you are already familiar with):
 
-> ![](https://github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png)
+> ![](https://drawsql.app/teams/microverse-97/diagrams/erd)
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -132,11 +132,13 @@ To run the project, execute the following command:
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<div id="badges"align="center">
-<!-- AUTHORS -->
 
+<!-- AUTHORS -->
+<div id="badges"align="center">
 ## 👥 Authors <a name="authors"></a>
+
 ## 👤 *Tadesse Jemal*
+
 </div>
 <div id="badges"align="center">
   <a href="https://www.linkedin.com/in/tadesse-jemal-7b7058204/">
@@ -150,7 +152,9 @@ To run the project, execute the following command:
   </a>
 </div>
 <div id="badges"align="center">
+
 ## 👤 *Angel uray*
+
 </div>
 
 <div id="badges"align="center">
@@ -165,7 +169,9 @@ To run the project, execute the following command:
   </a>
 </div>
 <div id="badges"align="center">
-## 👤 *Angel uray*
+
+## 👤 * Kumilachew Getie*
+
 </div>
 
 <div id="badges"align="center">
@@ -176,7 +182,7 @@ To run the project, execute the following command:
     <img src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" alt="Github Badge"/>
   </a>
   <a href="">
-    <img src="https://twitter.com/Getie_Haddis" alt="Twitter Badge"/>
+    <img src="https://twitter.com/Getie_Haddis/" alt="Twitter Badge"/>
   </a>
 </div>
 
