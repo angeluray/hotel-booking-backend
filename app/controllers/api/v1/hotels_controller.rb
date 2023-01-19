@@ -17,11 +17,6 @@ class Api::V1::HotelsController < ApplicationController
 
   # GET /api/v1/hotels/1
   def show
-    @hotel = Hotel.find(params[:id])
-    render json: @hotel
-  end
-
-  def hotel_by_city
     @one = []
     @hotel = Hotel.find(params[:id])
     @one.push(@hotel.as_json.merge({ image: url_for(@hotel.image) }))
