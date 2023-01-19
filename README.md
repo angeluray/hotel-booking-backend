@@ -135,6 +135,7 @@ To run the project, execute the following command:
 
 <!-- AUTHORS -->
 <div id="badges"align="center">
+
 ## 👥 Authors <a name="authors"></a>
 
 ## 👤 *Tadesse Jemal*
