@@ -86,12 +86,12 @@ The end result should follow the following data model (this is an Entity Relatio
 
 ## Roadmap
 
- > Set up the repository/repositories on GitHub and use Gitflow.
- > Set up Postgres for the database
- > Create controllers, endpoints and models
- > Use Rails to create API.
- > Use React & Redux to create frontend UI.
- > Create README
+ - Set up the repository/repositories on GitHub and use Gitflow.
+ - Set up Postgres for the database
+ - Create controllers, endpoints and models
+ - Use Rails to create API.
+ - Use React & Redux to create frontend UI.
+ - Create README
 
 <!-- GETTING STARTED -->
 
@@ -132,12 +132,12 @@ To run the project, execute the following command:
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<div id="badges"align="center">
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 ## 👤 *Tadesse Jemal*
-
+</div>
 <div id="badges"align="center">
   <a href="https://www.linkedin.com/in/tadesse-jemal-7b7058204/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
@@ -149,8 +149,9 @@ To run the project, execute the following command:
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
   </a>
 </div>
-
+<div id="badges"align="center">
 ## 👤 *Angel uray*
+</div>
 
 <div id="badges"align="center">
   <a href="www.linkedin.com/in/angeluray-jobs">
@@ -163,8 +164,9 @@ To run the project, execute the following command:
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
   </a>
 </div>
-
+<div id="badges"align="center">
 ## 👤 *Angel uray*
+</div>
 
 <div id="badges"align="center">
   <a href="https://www.linkedin.com/in/kumilachew-getie-0356bb157/">
@@ -176,7 +178,7 @@ To run the project, execute the following command:
   <a href="">
     <img src="https://twitter.com/Getie_Haddis" alt="Twitter Badge"/>
   </a>
-
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
