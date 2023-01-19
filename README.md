@@ -45,6 +45,9 @@ Hotel Booking Backend is a Hotel Booking application where the user can register
 
 <details>
   <summary>Client</summary>
+  <ul>
+    <li>React</li>
+  </ul>
 </details>
 
 <details>
