@@ -1,5 +1,5 @@
 class Api::V1::ReservationsController < ApplicationController
-  before_action :set_api_v1_reservation, only: %i[show destroy]
+  before_action :set_reservation, only: %i[show destroy]
 
   def index
     @reservations = Reservation.all.includes([:user])
@@ -8,9 +8,11 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
+    @user = User.find(params[:user_id])
+    @reservation.user = @user
 
     if @reservation.save
-      render json: { message: 'Reservation has been successfully created' }
+      render json: @reservation, status: :created
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end
@@ -18,6 +20,8 @@ class Api::V1::ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
+
+    render json: @reservation
   end
 
   def destroy
@@ -37,6 +41,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.require(:reservation).permit(:date, :user_id, :room_type_id, :hotel_id)
+    params.permit(:date, :user_id, :room_type_id, :hotel_id)
   end
 end

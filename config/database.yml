@@ -24,8 +24,13 @@ default: &default
 development:
   <<: *default
   database: hotel_booking_backend_development
-  username: <%= ENV["USER_NAME"] %>
-  password: <%= ENV["PASSWORD"] %>
+  # username: <%= ENV["USER_NAME"] %>
+  # password: <%= ENV["PASSWORD"] %>
+
+  # username: postgres
+  # password: 123
+  # host: localhost
+  # port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -63,6 +68,11 @@ test:
   username: <%= ENV["USER_NAME"] %>
   password: <%= ENV["PASSWORD"] %>
 
+  # username: postgres
+  # password: 123
+  # host: localhost
+  # port: 5432
+
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -85,6 +95,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: hotel_booking_backend_production
   username: hotel_booking_backend
   password: <%= ENV["HOTEL_BOOKING_BACKEND_DATABASE_PASSWORD"] %>

@@ -1,13 +1,9 @@
 class Hotel < ApplicationRecord
   belongs_to :city
   has_many :reservations, dependent: :destroy
-  has_many :users, through: :reservations, dependent: :destroy
+  has_many :users, through: :reservations
+  has_many :room_types, through: :reservations
 
-  validates :name, presence: true
-  validates :description, presence: true
-  validates :rating, presence: true
-  validates :image, presence: true
-  validates :city_id, presence: true
+  # has_one_attached :images, dependent: :destroy
 
-  has_one_attached :image
 end
