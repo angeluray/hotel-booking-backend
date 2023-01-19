@@ -24,8 +24,8 @@ default: &default
 development:
   <<: *default
   database: hotel_booking_backend_development
-  username: <%= ENV["USER_NAME"] %>
-  password: <%= ENV["PASSWORD"] %>
+  # username: <%= ENV["USER_NAME"] %>
+  # password: <%= ENV["PASSWORD"] %>
 
   username: postgres
   password: 123
@@ -95,6 +95,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: hotel_booking_backend_production
   username: hotel_booking_backend
   password: <%= ENV["HOTEL_BOOKING_BACKEND_DATABASE_PASSWORD"] %>

@@ -1,5 +1,5 @@
 class Api::V1::ReservationsController < ApplicationController
-  before_action :set_api_v1_reservation, only: %i[show destroy]
+  before_action :set_reservation, only: %i[show destroy]
 
   def index
     @reservations = Reservation.all.includes([:user])
@@ -8,7 +8,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
-    @user = User.find(params['user_id'])
+    @user = User.find(params[:user_id])
     @reservation.user = @user
 
     if @reservation.save
@@ -20,6 +20,8 @@ class Api::V1::ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
+
+    render json: @reservation
   end
 
   def destroy

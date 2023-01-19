@@ -1,11 +1,10 @@
 class Api::V1::HotelsController < ApplicationController
+  before_action :set_hotel, only: %i[show update destroy]
 
   # GET /api/v1/hotels
-  # GET /api/v1/hotels
   def index
-    # @hotels = Hotel.all.with_attached_images
     @hotels = []
-    # render json: @hotels
+
     Hotel.all.each do |hotel|
       @hotels.push(hotel.as_json.merge({ image: url_for(hotel.image) }))
     end
@@ -23,18 +22,18 @@ class Api::V1::HotelsController < ApplicationController
   end
 
   def hotel_by_city
-    @city = City.find(params[:id])
-    @hotels = @city.hotels
-    render json: @hotels
+    @one = []
+    @hotel = Hotel.find(params[:id])
+    @one.push(@hotel.as_json.merge({ image: url_for(@hotel.image) }))
+
+    render json: @one
   end
 
   # POST /api/v1/hotels
   def create
     @hotel = Hotel.new(hotel_params)
     @city = City.find(params['city_id'])
-    # @hotel.images.attached(params[@hotel][:images])
-    # @hotel.images.attach(params[:images])
-    # @images = params[:images]
+
     @hotel.city = @city
     if @hotel.save
       render json: @hotel, status: :created
