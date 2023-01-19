@@ -27,7 +27,9 @@
 
 # 📖 Hotel Booking App 
 Hotel Booking Backend is a Hotel Booking application where the user can register new accounts, login and reserve a set of different Hotels. It is built and connected by using two different repos, including Back-end(Rails) and Front-end(React/Redux).
+
 #### Link to React App [Hello-react-frontend](https://github.com/angeluray/hotel-booking-frontend.git)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 - Ruby on Rails
@@ -83,16 +85,16 @@ The end result should follow the following data model (this is an Entity Relatio
   
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demos and Importand links <a name="live-demo"></a>
 
-### <a src="https://hotelator.onrender.com">Frontend Deployment</a>
+- [Hotelator Frontend deployment link](https://hotelator.onrender.com)
 
-- [Bakend deployment link](https://hotelator.onrender.com)
+- [Hotelator Bakend deployment link](https://hotelator.onrender.com)
 > Note this is for information purpose, however if you go to this link you wont be able to see a content, since it is API only(It will retrieve json responses)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- [Link to the Hotelator API](https://documenter.getpostman.com/view/25389109/2s8ZDVZifK)
+- [Link to the Hotelator API documentation](https://documenter.getpostman.com/view/25389109/2s8ZDVZifK)
 
 ## Roadmap
 
