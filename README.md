@@ -85,11 +85,14 @@ The end result should follow the following data model (this is an Entity Relatio
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo](https://hotelator.onrender.com)
+### <a src="https://hotelator.onrender.com">Frontend Deployment</a>
+
+### <a src="https://hotelator.onrender.com"> Backend API deployment</a>
+> Note this is for information purpose, however if you go to this link you wont be able to see a content, since it is API only(It will retrieve json responses)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### Link to API Documentation [API Documentation](https:/https://documenter.getpostman.com/view/25389109/2s8ZDVZifK)
+#### <a src="https://documenter.getpostman.com/view/25389109/2s8ZDVZifK"> Link to the Hotelator Api Documentation</a>
 
 ## Roadmap
 
@@ -106,6 +109,11 @@ The end result should follow the following data model (this is an Entity Relatio
 
 To get a local copy up and running, follow these steps.
 
+## Frontend repository
+
+- Run the command bellow first in your terminal in a different folder and open the file using cd <the name of the file> if needed.
+> git clone https://github.com/angeluray/hotel-booking-frontend.git
+
 ### Prerequisites
 
 In order to run this project you need:
@@ -119,12 +127,16 @@ In order to run this project you need:
 
 Install this project with:
 
-```sh
+Run the command bellow first and open the file using cd <the name of the file> if needed.
+
+> git clone git@github.com:angeluray/hotel-booking-backend.git
+
+```sh or bash
   bundle install
 ```
 
 Create and migrate the database
-```sh
+```sh or bash
  rails db:create
  rails db:migrate
  rails db:seed
@@ -134,7 +146,7 @@ Create and migrate the database
 
 To run the project, execute the following command:
 
-```sh
+```sh or bash
   rails server or rails s
 ```
 
@@ -200,9 +212,9 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Controllers specs]**
-- [ ] **[Processing data in models]**
-- [ ] **[Views]**
+- [ ] **[Controllers, and Models specs]**
+- [ ] **[Improve overrall style and perfomance of the application]**
+- [ ] **[Admin role to allow only admins to Add hotels]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -227,19 +239,23 @@ Give a ⭐️ if you like this project!
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- We want to say thank you to [Murat Korkmaz](https://www.behance.net/muratk) on Behance the creator of this beautiful [design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) that we used as a guide to build our project.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ <a name="faq"></a>
 
-- **[Question_1d]**
+- **Can i use this project as mine?**
 
-  - [Answer_1]
+  - This project is for educational purposes and it belongs to its creators, however you can clone it and use it a guide for creating yours as part of
+  an educational project.
 
-- **[Question_2]**
+- **This project is availabe to do actual reservations?**
 
-  - [Answer_2]
+  - No, however it works almost the same, and you could use it in the future for creating your own app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
