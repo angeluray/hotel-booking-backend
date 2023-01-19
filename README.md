@@ -134,9 +134,9 @@ To run the project, execute the following command:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
-<div id="badges"align="center">
-
 ## 👥 Authors <a name="authors"></a>
+
+<div id="badges"align="center">
 
 ## 👤 *Tadesse Jemal*
 
@@ -182,7 +182,7 @@ To run the project, execute the following command:
   <a href="https://github.com/Kumilachew-g/">
     <img src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" alt="Github Badge"/>
   </a>
-  <a href="">
+  <a href="https://github.com/Kumilachew-g/">
     <img src="https://twitter.com/Getie_Haddis/" alt="Twitter Badge"/>
   </a>
 </div>
