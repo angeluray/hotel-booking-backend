@@ -85,7 +85,7 @@ The end result should follow the following data model (this is an Entity Relatio
   
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demos and Importand links <a name="live-demo"></a>
+## 🚀 Live Demos and Important links <a name="live-demo"></a>
 
 - [Hotelator Frontend deployment link](https://inspiring-kashata-9d9dfc.netlify.app/)
 
@@ -95,6 +95,15 @@ The end result should follow the following data model (this is an Entity Relatio
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 - [Link to the Hotelator API documentation](https://documenter.getpostman.com/view/25389109/2s8ZDVZifK)
+
+## Kanbanboard
+
+- [Kanban board link](https://github.com/users/angeluray/projects/2)
+- [Kanban board initial state + screenshots + initial colaborators](https://github.com/angeluray/hotel-booking-backend/issues/15)
+- The final number of colaborators is 3:
+   - @Kumilachew-g
+   - @Tadessejemal1 
+   - @angeluray 
 
 ## Screenshots
 
