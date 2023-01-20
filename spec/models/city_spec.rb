@@ -5,8 +5,7 @@ RSpec.describe City, type: :model do
     @city = City.new(name: 'Addis Ababa')
   end
 
-  it 'is valid if name of city is nil' do
-    @city.name = 'Venzuela'
-    expect(@city).to_not be_valid
+  it 'is valid with valid attributes' do
+    expect(@city).to be_valid
   end
 end
