@@ -30,6 +30,10 @@ Metrics/BlockLength:
 
 Style/RedundantArgument:
   Enabled: false
+
+Style/RedundantAssignment:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:
