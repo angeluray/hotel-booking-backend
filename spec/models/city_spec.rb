@@ -6,7 +6,7 @@ RSpec.describe City, type: :model do
   end
 
   it 'is valid if name of city is nil' do
-    @city.name = 'Black Hotel'
+    @city.name = 'Venzuela'
     expect(@city).to_not be_valid
   end
 end
