@@ -31,7 +31,7 @@ Metrics/BlockLength:
 Style/RedundantArgument:
   Enabled: false
 
-Style/RedundantAssignment:
+Style/RedundantConstantBase:
   Enabled: false
 
 Style/Documentation:
