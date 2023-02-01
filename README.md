@@ -25,10 +25,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Hotel Booking App 
-Hotel Booking Backend is a Hotel Booking application where the user can register new accounts, login and reserve a set of different Hotels. It is built and connected by using two different repos, including Back-end(Rails) and Front-end(React/Redux).
+# 📖 Hotelator - Booking app 
+Hotelator is a web service built with React & Redux, PostgreSQL and Ruby on Rails that allows users to Sign in/up, reserve hotel packages, check for the reservations the have made, create hotels based on cities, store images, delete hotels or just cancel reservations. All users actions/request are made by using JWT authentication in order to have the permissions to retrieve the required data per user.
 
-#### Link to React App [Hotel-Booking-Frontend](https://github.com/angeluray/hotel-booking-frontend.git)
+#### Client-side repository [Hotel-Booking-Frontend](https://github.com/angeluray/hotel-booking-frontend.git)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -87,24 +87,26 @@ The end result should follow the following data model (this is an Entity Relatio
 
 ## 🚀 Live Demos and Importand links <a name="live-demo"></a>
 
-- [Hotelator Frontend deployment link](https://inspiring-kashata-9d9dfc.netlify.app/)
+- [Hotelator live site](https://inspiring-kashata-9d9dfc.netlify.app/)
 
-- [Hotelator Bakend deployment link](https://hotelator.onrender.com)
+- [Hotelator backend](https://hotelator.onrender.com)
 > Note this is for information purpose, however if you go to this link you wont be able to see a content, since it is API only(It will retrieve json responses)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- [Link to the Hotelator API documentation](https://documenter.getpostman.com/view/25389109/2s8ZDVZifK)
+- [Hotelator API documentation](https://documenter.getpostman.com/view/25389109/2s8ZDVZifK)
 
 ## Screenshots
 
-![image_2023-01-19_19-00-48](https://user-images.githubusercontent.com/97189760/213582355-7102d3bb-4878-4fe2-8207-ddb6ac574844.png)
+<!-- ![image_2023-01-19_19-00-48](https://user-images.githubusercontent.com/97189760/213582355-7102d3bb-4878-4fe2-8207-ddb6ac574844.png)
 ![image_2023-01-19_19-01-17](https://user-images.githubusercontent.com/97189760/213582378-7a3e0f7f-f044-4f04-a30f-bba6f60cb7ec.png)
 ![image_2023-01-19_19-01-39](https://user-images.githubusercontent.com/97189760/213582402-44439e5e-4efb-468e-ae6c-84c791fc7bcb.png)
 ![image_2023-01-19_19-02-40](https://user-images.githubusercontent.com/97189760/213582424-5e6044ab-6a6c-413c-9366-2ad717f7cb4e.png)
 ![image_2023-01-19_19-03-41](https://user-images.githubusercontent.com/97189760/213582468-966eea6e-e585-467a-aa87-99c861f6b4dd.png)
 ![image_2023-01-19_19-04-03](https://user-images.githubusercontent.com/97189760/213582560-a72aaa97-70a9-40a1-a751-4165db79099f.png)
-![image_2023-01-19_19-06-00](https://user-images.githubusercontent.com/97189760/213582599-cd6585ad-80df-4ac3-8e15-f12a3abe3006.png)
+![image_2023-01-19_19-06-00](https://user-images.githubusercontent.com/97189760/213582599-cd6585ad-80df-4ac3-8e15-f12a3abe3006.png) -->
+
+
 
 
 ## Roadmap
