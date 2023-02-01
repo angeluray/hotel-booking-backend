@@ -49,6 +49,9 @@ Hotelator is a web service built with React & Redux, PostgreSQL and Ruby on Rail
   <summary>Client</summary>
   <ul>
     <li>React</li>
+    <li>Redux</li>
+    <li>Tailwind</li>
+    <li>CSS3</li>
   </ul>
 </details>
 
